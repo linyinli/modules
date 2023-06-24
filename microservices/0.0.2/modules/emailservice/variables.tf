@@ -30,3 +30,35 @@ variable "image_version" {
   type        = string
   default     = "v0.6.0"
 }
+
+# @hidden
+variable "frontend_service_name" {
+  type        = string
+  description = "Online Boutique frontend service name"
+  default     = "frontend-external"
+}
+
+# @hidden
+variable "seal_metadata_application_name" {
+  type        = string
+  description = "Seal metadata application name."
+  default     = ""
+}
+# @hidden
+variable "seal_metadata_application_instance_name" {
+  type        = string
+  description = "Seal metadata application instance name."
+  default     = ""
+}
+# @hidden
+variable "seal_metadata_project_name" {
+  type        = string
+  description = "Seal metadata project name."
+  default     = ""
+}
+# @hidden
+variable "seal_metadata_module_name" {
+  type        = string
+  description = "Seal metadata module name."
+  default     = ""
+}
