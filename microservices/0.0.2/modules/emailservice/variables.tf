@@ -32,10 +32,10 @@ variable "image_version" {
 }
 
 # @hidden
-variable "frontend_service_name" {
+variable "emailservice_service_name" {
   type        = string
-  description = "Online Boutique frontend service name"
-  default     = "frontend-external"
+  description = "Online Boutique emailservice service name"
+  default     = "emailservice"
 }
 
 # @hidden

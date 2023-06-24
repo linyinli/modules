@@ -34,16 +34,16 @@ resource "kubectl_manifest" "manifest" {
   yaml_body = element(data.kubectl_path_documents.manifest.documents, count.index)
 }
 
-data "kubernetes_service" "frontend_service" {
+data "kubernetes_service" "emailservice" {
   depends_on = [kubectl_manifest.manifest]
 
   metadata {
-    name      = local.frontend_service_name
+    name      = local.emailservice_service_name
     namespace = local.namespace
   }
 }
 
 locals {
-  frontend_service_name = var.frontend_service_name
-  namespace             = coalesce(var.namespace, "${var.seal_metadata_project_name}-${var.seal_metadata_application_name}")
+  emailservice_service_name = var.emailservice_service_name
+  namespace                 = coalesce(var.namespace, "${var.seal_metadata_project_name}-${var.seal_metadata_application_name}")
 }
