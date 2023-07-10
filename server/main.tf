@@ -45,7 +45,7 @@ variable "password" {
 }
 
 variable "dependsOn" {
-  type        = list(string)
+  type        = map(string)
   description = "Service dependsOn"
 }
 
