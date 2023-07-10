@@ -14,6 +14,8 @@ resource "ssh_resource" "server" {
 
   timeout = "3m"
   retry_delay = "5s"
+
+  triggers = var.dependsOn
 }
 
 variable "host" {
@@ -42,6 +44,11 @@ variable "password" {
   description = "SSH password"
 }
 
+variable "dependsOn" {
+  type        = list(string)
+  description = "Service dependsOn"
+}
+
 output "host" {
   value = var.host
   description = "SSH host"
@@ -55,6 +62,11 @@ output "port" {
 output "user" {
   value = var.user
   description = "SSH user"
+}
+
+output "dependsOn" {
+  value = var.dependsOn
+  description = "Service dependsOn"
 }
 
 output "password" {
