@@ -1,3 +1,11 @@
+terraform {
+  required_providers {
+    ssh = {
+      source = "loafoe/ssh"
+    }
+  }
+}
+
 resource "ssh_resource" "server" {
   host        = var.host
   port        = var.port
