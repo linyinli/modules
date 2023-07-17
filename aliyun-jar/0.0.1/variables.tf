@@ -5,6 +5,13 @@ variable "jar_url" {
   default     = "https://seal-demo-1303613262.cos.ap-guangzhou.myqcloud.com/example.jar"
 }
 
+# @label "Jar包服务端口"
+# @group "基础"
+variable "service_port" {
+  description = "The service port of the Jar package"
+  default = 80
+}
+
 # @label "实例规格"
 # @group "基础"
 variable "instance_type" {
