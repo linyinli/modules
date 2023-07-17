@@ -53,3 +53,10 @@ variable "internet_max_bandwidth_out" {
   description = "The maximum outbound bandwidth of the public network"
   default     = 5
 }
+
+# @label "服务依赖"
+# @group "高级"
+variable "dependsOn" {
+  type        = map(string)
+  description = "Service dependsOn"
+}
