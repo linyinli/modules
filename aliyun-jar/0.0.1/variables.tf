@@ -8,9 +8,8 @@ variable "jar_url" {
 # @label "Jar包服务端口"
 # @group "基础"
 variable "service_port" {
-  type        = list(number)
   description = "The service port of the Jar package"
-  default     = [80]
+  default     = 80
 }
 
 # @label "实例规格"
