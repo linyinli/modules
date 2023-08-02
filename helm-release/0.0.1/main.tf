@@ -33,23 +33,28 @@ data "helm_template" "release" {
 }
 
 variable "release_name" {
+  type = string
   description = "The name of the Helm release"
 }
 
 variable "release_namespace" {
+  type = string
   description = "The namespace of the Helm release"
   default     = "default"
 }
 
 variable "chart_repository" {
+  type = string
   description = "The URL of the Helm chart repository, such as https://charts.bitnami.com/bitnami or oci://registry-1.docker.io/bitnamicharts"
 }
 
 variable "chart_name" {
+  type = string
   description = "The name of the Helm chart, such as nginx"
 }
 
 variable "chart_version" {
+  type = string
   description = "The version of the Helm chart"
   default     = ""
 }
@@ -65,6 +70,7 @@ variable "force_update" {
 }
 
 variable "timeout" {
+  type = number
   description = "Time in seconds to wait for any individual kubernetes operation (like Jobs for hooks)"
   default     = 300
 }
