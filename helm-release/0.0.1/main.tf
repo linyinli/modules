@@ -72,7 +72,8 @@ variable "chart_version" {
 # @group "Basic"
 # @label "Set Values"
 variable "set_values" {
-  description = "Value block with custom values to be merged with the values yaml, a yaml formatted text"
+  type = map(string)
+  description = "Value block with custom values to be merged with the values yaml"
   default     = {}
 }
 
