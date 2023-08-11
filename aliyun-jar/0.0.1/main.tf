@@ -12,7 +12,7 @@ resource "alicloud_instance" "example" {
   host_name = var.hostnmae
   key_name = "seal-demo"
 
-  tags = var.dependsOn
+  tags = var.env
 
   security_groups = [
     data.alicloud_security_groups.default.groups.0.id
