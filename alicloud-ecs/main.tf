@@ -14,6 +14,7 @@ resource "alicloud_instance" "example" {
   security_groups = [
     data.alicloud_security_groups.default.groups.0.id
   ]
+}
 
 data "alicloud_vpcs" "default" {
   name_regex = "default"
