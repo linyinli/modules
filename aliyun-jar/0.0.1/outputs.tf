@@ -14,7 +14,7 @@ output "endpoint_webservice" {
   value = "http://${alicloud_instance.example.public_ip}:${var.service_port}"
 }
 
-output "dependsOn" {
-  value = var.dependsOn
-  description = "Service dependsOn"
+output "env" {
+  value = var.env
+  description = "Service environment"
 }
