@@ -11,6 +11,7 @@ resource "rke_cluster" "cluster" {
     address = var.node_ip
     role    = var.node_role
     user    = var.ssh_user
+    port    = var.ssh_port
     ssh_key = var.ssh_key
   }
   ignore_docker_version = true
@@ -37,6 +38,12 @@ variable "node_role" {
 variable "ssh_user" {
     description = "The user of the node"
     default     = "ubuntu"
+}
+
+# @label "SSH端口"
+variable "ssh_port" {
+    description = "The ssh port of the node"
+    default     = 22
 }
 
 # @label "SSH秘钥"
