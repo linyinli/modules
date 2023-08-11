@@ -69,5 +69,5 @@ variable "internet_max_bandwidth_out" {
 variable "env" {
   type        = map(string)
   description = "Service environment"
-  default     = ""
+  default     = {}
 }
