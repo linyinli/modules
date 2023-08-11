@@ -42,9 +42,4 @@ variable "ssh_user" {
 # @label "SSH秘钥"
 variable "ssh_key" {
     description = "The ssh key of the user"
-    default     = <<EOF
------BEGIN RSA PRIVATE KEY-----
-
------END RSA PRIVATE KEY-----
-EOF
 }
