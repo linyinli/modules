@@ -28,6 +28,7 @@ variable "image_id" {
 
 # @label "系统磁盘类型"
 # @group "基础"
+# @options ["ephemeral_ssd", "cloud_efficiency", "cloud_ssd", "cloud_essd", "cloud", "cloud_auto"]
 variable "system_disk_category" {
   description = "The category of the system disk"
   default     = "cloud_efficiency"
@@ -36,12 +37,19 @@ variable "system_disk_category" {
 # @label "系统盘大小"
 # @group "基础"
 variable "system_disk_size" {
-  description = "The size of the system disk"
+  description = "The size of the system disk, value range: [20, 500]"
   default     = 40
+}
+
+# @label "主机名"
+# @group "基础"
+variable "hostname" {
+  description = "The hostname of the ECS instance"
 }
 
 # @label "网络计费类型"
 # @group "高级"
+# @options ["PayByTraffic", "PayByBandwidth"]
 variable "internet_charge_type" {
   description = "The billing method of the public network bandwidth"
   default     = "PayByTraffic"
