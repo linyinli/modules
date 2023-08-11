@@ -44,3 +44,7 @@ variable "security_ips" {
     description = "The security IPs of the KVStore instance"
     default     = ["0.0.0.0"]
 }
+
+output "connection_domain" {
+  value = alicloud_kvstore_instance.example.connection_domain
+}
