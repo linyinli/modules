@@ -15,6 +15,7 @@ resource "rke_cluster" "cluster" {
     ssh_key = var.ssh_key
   }
   ignore_docker_version = true
+  kubernetes_version = var.kubernetes_version
   upgrade_strategy {
     drain = true
     max_unavailable_worker = "20%"
@@ -49,4 +50,9 @@ variable "ssh_port" {
 # @label "SSH秘钥"
 variable "ssh_key" {
     description = "The ssh key of the user"
+}
+
+# @label "Kubernetes版本"
+variable "kubernetes_version" {
+    description = "The kubernetes version of the rke cluster"
 }
