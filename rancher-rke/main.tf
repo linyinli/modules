@@ -59,10 +59,12 @@ variable "kubernetes_version" {
 }
 
 output "kube_config_yaml" {
+  sensitive = true
   value = rke_cluster.cluster.kube_config_yaml
 }
 
 output "rke_cluster_yaml" {
+  sensitive = true
   value = rke_cluster.cluster.rke_cluster_yaml
 }
 
