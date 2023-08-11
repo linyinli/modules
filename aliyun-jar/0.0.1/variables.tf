@@ -49,6 +49,13 @@ variable "hostname" {
   default     = ""
 }
 
+# @label "SSH Key名"
+# @group "基础"
+variable "ssh_key_name" {
+  description = "The ssh ket name of the ECS instance"
+  default     = "seal-demo"
+}
+
 # @label "网络计费类型"
 # @group "高级"
 # @options ["PayByTraffic", "PayByBandwidth"]
