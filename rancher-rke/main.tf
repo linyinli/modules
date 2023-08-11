@@ -55,4 +55,5 @@ variable "ssh_key" {
 # @label "Kubernetes版本"
 variable "kubernetes_version" {
     description = "The kubernetes version of the rke cluster"
+    default = "v1.23.15-rancher1-1"
 }
