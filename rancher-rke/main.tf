@@ -1,3 +1,11 @@
+terraform {
+  required_providers {
+    rke = {
+      source = "rancher/rke"
+    }
+  }
+}
+
 resource "rke_cluster" "cluster" {
   nodes {
     address = var.node_ip
