@@ -44,7 +44,9 @@ variable "system_disk_size" {
 # @label "主机名"
 # @group "基础"
 variable "hostname" {
+  type        = string
   description = "The hostname of the ECS instance"
+  default     = ""
 }
 
 # @label "网络计费类型"
@@ -62,9 +64,10 @@ variable "internet_max_bandwidth_out" {
   default     = 5
 }
 
-# @label "服务依赖"
+# @label "环境变量"
 # @group "高级"
-variable "dependsOn" {
+variable "env" {
   type        = map(string)
-  description = "Service dependsOn"
+  description = "Service environment"
+  default     = ""
 }
