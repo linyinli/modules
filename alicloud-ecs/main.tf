@@ -31,8 +31,7 @@ data "alicloud_security_groups" "default" {
 resource "null_resource" "health_check" {
   depends_on = [
     alicloud_instance.example,
-    ]
-  }
+  ]
 }
 
 # @label "实例规格"
