@@ -75,3 +75,11 @@ variable "internet_max_bandwidth_out" {
   description = "The maximum outbound bandwidth of the public network"
   default     = 5
 }
+
+output "public_ip" {
+  value = alicloud_instance.example.public_ip
+}
+
+output "primary_ip_address" {
+  value = alicloud_instance.example.primary_ip_address
+}
