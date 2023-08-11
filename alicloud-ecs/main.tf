@@ -9,7 +9,7 @@ resource "alicloud_instance" "example" {
 
   vswitch_id = data.alicloud_vswitches.default.vswitches.0.id
 
-  host_name = var.hostnmae
+  host_name = var.hostname
   key_name = "seal-demo"
 
   security_groups = [
@@ -62,6 +62,14 @@ variable "system_disk_category" {
 variable "system_disk_size" {
   description = "The size of the system disk, value range: [20, 500]"
   default     = 40
+}
+
+# @label "主机名"
+# @group "基础"
+variable "hostname" {
+  type        = string
+  description = "The hostname of the ECS instance"
+  default     = ""
 }
 
 # @label "网络计费类型"
