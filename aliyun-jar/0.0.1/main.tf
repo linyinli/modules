@@ -10,7 +10,7 @@ resource "alicloud_instance" "example" {
   vswitch_id = data.alicloud_vswitches.default.vswitches.0.id
   
   host_name = var.hostname
-  key_name = "seal-demo"
+  key_name = var.ssh_key_name
 
   tags = var.env
 
