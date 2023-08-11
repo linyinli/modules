@@ -57,3 +57,35 @@ variable "kubernetes_version" {
     description = "The kubernetes version of the rke cluster"
     default = "v1.23.15-rancher1-1"
 }
+
+output "kube_config_yaml" {
+  value = rke_cluster.cluster.kube_config_yaml
+}
+
+output "rke_cluster_yaml" {
+  value = rke_cluster.cluster.rke_cluster_yaml
+}
+
+output "api_server_url" {
+  value = rke_cluster.cluster.api_server_url
+}
+
+output "control_plane_hosts" {
+  value = rke_cluster.cluster.control_plane_hosts
+}
+
+output "etcd_hosts" {
+  value = rke_cluster.cluster.etcd_hosts
+}
+
+output "worker_hosts" {
+  value = rke_cluster.cluster.worker_hosts
+}
+
+output "cluster_cidr" {
+  value = rke_cluster.cluster.cluster_cidr
+}
+
+output "running_system_images" {
+  value = rke_cluster.cluster.running_system_images
+}
