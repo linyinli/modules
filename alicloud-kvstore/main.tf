@@ -21,14 +21,12 @@ data "alicloud_vswitches" "default" {
 }
 
 # @label "实例类型"
-# @group "基础"
 variable "instance_type" {
     description = "The instance type of the KVStore instance"
     default     = "Redis"
 }
 
 # @label "实例版本"
-# @group "基础"
 variable "engine_version" {
     description = "The engine version of the KVStore instance"
     default     = "5.0"
